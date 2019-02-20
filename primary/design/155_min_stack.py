@@ -76,7 +76,6 @@ class MinStack:
         """
         if len(self.stack) == 0:
             return
-
         x = self.stack.pop()
         if x < 0:
             self.min = self.min - x
