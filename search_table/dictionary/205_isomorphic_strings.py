@@ -20,14 +20,14 @@ class Solution:
 
 
 def test_solution():
-    # s, t = 'egg', 'add'
-    # assert Solution().isIsomorphic(s, t)
+    s, t = 'egg', 'add'
+    assert Solution().isIsomorphic(s, t)
 
-    # s, t = 'foo', 'bar'
-    # assert not Solution().isIsomorphic(s, t)
+    s, t = 'foo', 'bar'
+    assert not Solution().isIsomorphic(s, t)
 
-    # s, t = 'paper', 'title'
-    # assert Solution().isIsomorphic(s, t)
+    s, t = 'paper', 'title'
+    assert Solution().isIsomorphic(s, t)
 
     s, t = 'ab', 'aa'
     assert Solution().isIsomorphic(s, t)

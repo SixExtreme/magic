@@ -23,6 +23,7 @@ class Solution:
                 m[x] -= 1
         return ans
 
+
 def test_solution():
     nums1, nums2 = [1, 2, 2, 1], [2, 2]
     assert Counter(Solution().intersect(nums1, nums2)).get(2) == 2

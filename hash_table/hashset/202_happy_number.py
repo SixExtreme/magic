@@ -36,4 +36,5 @@ class Solution:
 
 
 def test_solution():
+    assert Solution().isHappy(7)
     assert Solution().isHappy(19)
