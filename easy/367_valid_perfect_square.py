@@ -26,8 +26,6 @@ class Solution:
         return x * x == num
 
 
-
-
 def test_solution():
     assert Solution().isPerfectSquare(16)
     assert not Solution().isPerfectSquare(18)
