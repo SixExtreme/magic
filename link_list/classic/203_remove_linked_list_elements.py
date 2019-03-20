@@ -12,6 +12,7 @@ class ListNode:
             p = p.next
         return arr
 
+
 def build_link_list(array: list):
     zero = ListNode(0)
     p = zero
@@ -19,6 +20,7 @@ def build_link_list(array: list):
         p.next = ListNode(x)
         p = p.next
     return zero.next
+
 
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
