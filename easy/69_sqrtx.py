@@ -26,11 +26,11 @@ class Solution:
         # return int(t)
 
         # solution 3
-        for i in range(x + 1):
-            if i * i == x:
-                return i
-            elif i * i < x < (i + 1) * (i + 1):
-                return i
+        # for i in range(x + 1):
+        #     if i * i == x:
+        #         return i
+        #     elif i * i < x < (i + 1) * (i + 1):
+        #         return i
 
 
 def test_solution():
