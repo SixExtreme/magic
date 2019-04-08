@@ -26,8 +26,12 @@ class Solution(object):
                 return num
             elif guess(num) == 1:
                 a = num + 1
+                if guess(a) == 0:
+                    return a
             elif guess(num) == -1:
                 b = num - 1
+                if guess(b) == 0:
+                    return b
         return 0
 
 
