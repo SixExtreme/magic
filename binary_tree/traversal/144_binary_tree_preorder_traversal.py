@@ -11,21 +11,21 @@ class TreeNode:
 
 class Solution:
     # solution 1
-    # def preorderTraversal(self, root: TreeNode) -> List[int]:
-    #     def preorder(root: TreeNode, vals: List[int]):
-    #         if not root:
-    #             return
-    #         vals.append(root.val)
-    #         if root.left:
-    #             preorder(root.left, vals)
-    #         if root.right:
-    #             preorder(root.right, vals)
-    #
-    #     ans = []
-    #     if not root:
-    #         return ans
-    #     preorder(root, ans)
-    #     return ans
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        def MLR(root: TreeNode, vals: List[int]):
+            if not root:
+                return
+            vals.append(root.val)
+            if root.left:
+                MLR(root.left, vals)
+            if root.right:
+                MLR(root.right, vals)
+
+        ans = []
+        if not root:
+            return ans
+        MLR(root, ans)
+        return ans
 
     # solution 2
     # def preorderTraversal(self, root: TreeNode) -> List[int]:
@@ -70,27 +70,27 @@ class Solution:
     #     return ans
 
     # solution 5
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
-        ans = []
-        if not root:
-            return ans
-        curr = root
-        while curr:
-            if not curr.left:
-                ans.append(curr.val)
-                curr = curr.right
-            else:
-                most_right = curr.left
-                while most_right.right and curr is not most_right.right:
-                    most_right = most_right.right
-                if most_right.right:
-                    curr = curr.right
-                    most_right.right = None
-                else:
-                    ans.append(curr.val)
-                    most_right.right = curr
-                    curr = curr.left
-        return ans
+    # def preorderTraversal(self, root: TreeNode) -> List[int]:
+    #     ans = []
+    #     if not root:
+    #         return ans
+    #     curr = root
+    #     while curr:
+    #         if not curr.left:
+    #             ans.append(curr.val)
+    #             curr = curr.right
+    #         else:
+    #             most_right = curr.left
+    #             while most_right.right and curr is not most_right.right:
+    #                 most_right = most_right.right
+    #             if most_right.right:
+    #                 curr = curr.right
+    #                 most_right.right = None
+    #             else:
+    #                 ans.append(curr.val)
+    #                 most_right.right = curr
+    #                 curr = curr.left
+    #     return ans
 
 
 def test_solution():
