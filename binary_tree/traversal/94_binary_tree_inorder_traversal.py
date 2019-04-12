@@ -41,7 +41,44 @@ class Solution:
 
     # solution 3
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        pass
+        ans: List[int] = []
+        if not root:
+            return ans
+        curr: TreeNode = root
+        stack: List[TreeNode] = []
+        while curr or stack:
+            if curr:
+                stack.append(curr)
+                curr = curr.left
+            else:
+                curr = stack.pop()
+                ans.append(curr.val)
+                curr = curr.right
+        return ans
+
+    # solution 4
+    # def inorderTraversal(self, root: TreeNode) -> List[int]:
+    #     ans: List[int] = []
+    #     if not root:
+    #         return ans
+    #     curr: TreeNode = root
+    #     while curr:
+    #         if not curr.left:
+    #             ans.append(curr.val)
+    #             curr = curr.right
+    #         else:
+    #             most_right: TreeNode = curr.left
+    #             while most_right.right and curr is not most_right.right:
+    #                 most_right = most_right.right
+    #             if most_right.right:
+    #                 # 落叶归根之后
+    #                 ans.append(curr.val)
+    #                 curr = curr.right
+    #                 most_right.right = None
+    #             else:
+    #                 most_right.right = curr
+    #                 curr = curr.left
+    #     return ans
 
 
 def test_solution():

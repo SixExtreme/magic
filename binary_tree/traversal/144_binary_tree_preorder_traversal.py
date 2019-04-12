@@ -87,6 +87,7 @@ class Solution:
     #                 curr = curr.right
     #                 most_right.right = None
     #             else:
+    #                 # 落叶归根之前
     #                 ans.append(curr.val)
     #                 most_right.right = curr
     #                 curr = curr.left
