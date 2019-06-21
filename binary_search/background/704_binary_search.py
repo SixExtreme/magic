@@ -7,11 +7,6 @@ class Solution:
     def search(nums: List[int], target: int) -> int:
         if len(nums) == 0:
             return -1
-        if len(nums) == 1:
-            return -1 if nums[0] != target else 0
-        if nums[0] > target or nums[-1] < target:
-            return -1
-
         i, j = 0, len(nums) - 1
         while i <= j:
             mid = i + (j - i) // 2
@@ -25,7 +20,6 @@ class Solution:
                 j = mid - 1
             elif nums[mid] < target:
                 i = mid + 1
-
         return -1
 
 
